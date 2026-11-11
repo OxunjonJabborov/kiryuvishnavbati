@@ -62,9 +62,24 @@ class NotificationObserver(Observer):
 class AuditLogObserver(Observer):
     """Har bir hodisani audit jurnaliga yozadi (kim, nima, qachon)."""
 
-    def __init__(self):
+    def __init__(self, path: str | None = None):
+        self.path = path                  # None bo'lsa faqat xotirada (testlar)
         self.records: list[str] = []
 
     def update(self, event: str, data: dict) -> None:
         safe = {k: v for k, v in data.items() if k != "now"}
-        self.records.append(f"{datetime.now():%Y-%m-%d %H:%M:%S} {event} {safe}")
+        line = f"{data.get('now', datetime.now()):%Y-%m-%d %H:%M} {event} {safe}"
+        self.records.append(line)
+        if self.path:                     # qayta ishga tushganda yo'qolmasin
+            with open(self.path, "a", encoding="utf-8") as f:
+                f.write(line + "\n")
+
+    def last(self, n: int) -> list[str]:
+        """Oxirgi n ta yozuv (yangisi birinchi)."""
+        if self.path:
+            try:
+                with open(self.path, encoding="utf-8") as f:
+                    return [l.rstrip() for l in f.readlines()[-n:]][::-1]
+            except FileNotFoundError:
+                return []
+        return self.records[-n:][::-1]

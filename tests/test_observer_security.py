@@ -47,3 +47,10 @@ def test_account_locked_after_five_wrong_passwords(svc, ali):
 def test_sql_injection_in_login_does_not_work(svc, ali):
     with pytest.raises(ServiceError):
         svc["auth"].login("ali' OR '1'='1", "x", FIXED_NOW)
+
+
+def test_audit_log_survives_restart(tmp_path):
+    from kirnavbat.observer import AuditLogObserver
+    path = str(tmp_path / "audit.log")
+    AuditLogObserver(path).update("machine_broken", {"machine": "M1", "now": FIXED_NOW})
+    assert "machine_broken" in AuditLogObserver(path).last(1)[0]   # yangi obyekt ham ko'radi

@@ -3,6 +3,7 @@ import os
 import secrets
 from datetime import date, datetime, timedelta
 from functools import wraps
+from zoneinfo import ZoneInfo
 
 from flask import (Flask, abort, flash, g, redirect, render_template, request,
                    session, url_for)
@@ -17,6 +18,12 @@ from .repository import (BookingRepository, MachineRepository,
 from .services import AuthService, BookingService, ServiceError
 
 WEEKDAYS = ["Du", "Se", "Ch", "Pa", "Ju", "Sh", "Ya"]
+TASHKENT = ZoneInfo("Asia/Tashkent")
+
+
+def tashkent_now() -> datetime:
+    """Server qaysi mintaqada bo'lmasin, vaqt Toshkent bo'yicha olinadi."""
+    return datetime.now(TASHKENT).replace(tzinfo=None)
 
 
 def create_app(test_config: dict | None = None) -> Flask:
@@ -24,7 +31,7 @@ def create_app(test_config: dict | None = None) -> Flask:
     app.config.update(
         SECRET_KEY=os.environ.get("KIRNAVBAT_SECRET", "dev-faqat-lokal-uchun"),
         DATABASE=os.path.join(app.instance_path, "kirnavbat.db"),
-        NOW=datetime.now,            # testlarda vaqtni almashtirish uchun
+        NOW=tashkent_now,            # testlarda vaqtni almashtirish uchun
         SESSION_COOKIE_HTTPONLY=True,   # JavaScript cookie ni o'qiy olmaydi
         SESSION_COOKIE_SAMESITE="Lax",  # boshqa saytdan so'rov yuborishni qiyinlashtiradi
         PERMANENT_SESSION_LIFETIME=timedelta(hours=8),
@@ -39,7 +46,7 @@ def create_app(test_config: dict | None = None) -> Flask:
     _seed_staff(users)
     events = EventBus()
     events.subscribe(NotificationObserver(NotificationRepository(conn)))
-    audit = AuditLogObserver()
+    audit = AuditLogObserver(os.path.join(app.instance_path, "audit.log"))
     events.subscribe(audit)
 
     app.extensions["kirnavbat"] = {
@@ -213,10 +220,11 @@ def _register_routes(app: Flask) -> None:
     def admin():
         today = now().date()
         grid = ctx()["booking"].day_grid(today)
+        rows = sorted(grid.values(), key=lambda b: (b.start, b.machine_id))
         users = {b.user_id: ctx()["users"].by_id(b.user_id) for b in grid.values()}
         return render_template("admin.html", machines=ctx()["machines"].all(),
-                               grid=grid, users=users, today=today,
-                               log=ctx()["audit"].records[-8:][::-1])
+                               rows=rows, users=users, today=today,
+                               log=ctx()["audit"].last(8))
 
     @app.post("/boshqaruv/mashina/<int:machine_id>")
     @staff_required
