@@ -1,4 +1,5 @@
 """Mantiq qatlami: navbat qoidalari va autentifikatsiya."""
+import sqlite3
 from datetime import date, datetime, timedelta
 
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -94,7 +95,13 @@ class BookingService:
             raise ServiceError("Bu vaqt band.")
         if self.bookings.count_future_active(user.id, now) >= v.MAX_ACTIVE_BOOKINGS:
             raise ServiceError(f"Bir vaqtda ko'pi bilan {v.MAX_ACTIVE_BOOKINGS} ta faol navbat.")
-        return self.bookings.add(user.id, machine_id, start)
+        try:
+            return self.bookings.add(user.id, machine_id, start)
+        except sqlite3.IntegrityError:
+            # Kod ko'rigida topilgan xato: ikki so'rov bir vaqtda kelsa,
+            # is_taken ikkalasiga "bo'sh" deydi; baza indeksi ikkinchisini
+            # to'xtatadi va endi 500 xato o'rniga tushunarli javob qaytadi.
+            raise ServiceError("Bu vaqt band.") from None
 
     def cancel(self, user: User, booking_id: int, now: datetime) -> None:
         booking = self.bookings.by_id(booking_id)
