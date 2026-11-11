@@ -119,6 +119,12 @@ class BookingRepository:
             " AND start >= ?", (machine_id, now.strftime(DT_FMT)))
         return [_booking(r) for r in rows]
 
+    def users_with_cancelled_future(self, machine_id: int, now: datetime) -> list[int]:
+        rows = self.conn.execute(
+            "SELECT DISTINCT user_id FROM bookings WHERE machine_id = ?"
+            " AND status = 'bekor' AND start >= ?", (machine_id, now.strftime(DT_FMT)))
+        return [r[0] for r in rows]
+
     def cancel(self, booking_id: int) -> None:
         self.conn.execute("UPDATE bookings SET status = 'bekor' WHERE id = ?",
                           (booking_id,))
