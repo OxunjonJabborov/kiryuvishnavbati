@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1375" height="860" viewBox="0 0 1375 860" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1,1 L11,6 L1,11" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker><marker id="fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="context-stroke"/></marker><marker id="tri" viewBox="0 0 16 16" refX="15" refY="8" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M1,1 L15,8 L1,15 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker><marker id="dia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="context-stroke"/></marker><marker id="odia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect width="1375" height="860" fill="#ffffff"/>
+<g stroke="#0f172a" stroke-width="2" fill="none"><circle cx="110" cy="22" r="10" fill="#fde68a"/><line x1="110" y1="32" x2="110" y2="60"/><line x1="92" y1="42" x2="128" y2="42"/><line x1="110" y1="60" x2="95" y2="82"/><line x1="110" y1="60" x2="125" y2="82"/></g>
+<text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700">Administrator</text>
+<line x1="110" y1="110" x2="110" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="207" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="285.0" y="50.1" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">app.py</text>
+<text x="285.0" y="66.3" text-anchor="middle" font-size="12" font-weight="400" fill="#0f172a">/boshqaruv</text>
+<line x1="285" y1="78" x2="285" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="382" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="460.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">BookingService</text>
+<line x1="460" y1="78" x2="460" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="557" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="635.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">BookingRepository</text>
+<line x1="635" y1="78" x2="635" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="732" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="810.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">EventBus</text>
+<line x1="810" y1="78" x2="810" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="907" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="985.0" y="50.1" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Notification-</text>
+<text x="985.0" y="66.3" text-anchor="middle" font-size="12" font-weight="400" fill="#0f172a">Observer</text>
+<line x1="985" y1="78" x2="985" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="1082" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="1160.0" y="50.1" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">AuditLog-</text>
+<text x="1160.0" y="66.3" text-anchor="middle" font-size="12" font-weight="400" fill="#0f172a">Observer</text>
+<line x1="1160" y1="78" x2="1160" y2="840" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<path d="M110,140 L281,140" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="195.5" y="133.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">1: «Buzilgan deb belgilash»</text>
+<path d="M285,184 L456,184" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="370.5" y="177.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">2: set_machine_status(admin, id, &#x27;buzilgan&#x27;, now)</text>
+<path d="M460,228 L510,228 L510,254 L466,254" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="518" y="245.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">3: huquqni tekshirish (admin/texnik)</text>
+<path d="M460,290 L631,290" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="545.5" y="283.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">4: future_for_machine(id, now)</text>
+<path d="M635,334 L464,334" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="549.5" y="327.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">kelajakdagi navbatlar [b1, b2, ...]</text>
+<path d="M460,398 L631,398" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="545.5" y="391.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">5: cancel(b.id)</text>
+<rect x="400" y="360" width="295" height="60" rx="0" fill="none" stroke="#9333ea" stroke-width="1.6"/>
+<text x="547.5" y="394.6" text-anchor="middle" font-size="13" font-weight="400" fill="#0f172a"></text>
+<rect x="400" y="360" width="170" height="22" rx="0" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.6"/>
+<text x="485.0" y="375.2" text-anchor="middle" font-size="12" font-weight="400" fill="#0f172a">loop [har bir navbat]</text>
+<path d="M460,452 L806,452" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="633.0" y="445.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">6: notify(MACHINE_BROKEN, data)</text>
+<path d="M810,496 L981,496" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="895.5" y="489.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">7: update(event, data)</text>
+<path d="M985,540 L1035,540 L1035,566 L991,566" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="1043" y="557.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">8: har bir talabaga xabarnoma yozish</text>
+<path d="M810,602 L1156,602" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="983.0" y="595.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">9: update(event, data)</text>
+<path d="M1160,646 L1210,646 L1210,672 L1166,672" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="1218" y="663.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">10: audit.log ga yozish</text>
+<path d="M460,708 L289,708" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="374.5" y="701.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">OK</text>
+<path d="M285,752 L114,752" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="199.5" y="745.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">«Mashina holati yangilandi»</text>
+</svg>

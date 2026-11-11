@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="800" viewBox="0 0 1320 800" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1,1 L11,6 L1,11" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker><marker id="fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="context-stroke"/></marker><marker id="tri" viewBox="0 0 16 16" refX="15" refY="8" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M1,1 L15,8 L1,15 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker><marker id="dia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="context-stroke"/></marker><marker id="odia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect width="1320" height="800" fill="#ffffff"/>
+<rect x="210" y="30" width="900" height="750" rx="14" fill="#f8fafc" stroke="#64748b" stroke-width="1.6"/>
+<text x="660.0" y="409.6" text-anchor="middle" font-size="13" font-weight="400" fill="#0f172a"></text>
+<text x="660" y="58.0" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">KirNavbat tizimi</text>
+<g stroke="#0f172a" stroke-width="2" fill="none"><circle cx="110" cy="340" r="10" fill="#fde68a"/><line x1="110" y1="350" x2="110" y2="378"/><line x1="92" y1="360" x2="128" y2="360"/><line x1="110" y1="378" x2="95" y2="400"/><line x1="110" y1="378" x2="125" y2="400"/></g>
+<text x="110" y="418" text-anchor="middle" font-size="13" font-weight="700">Talaba</text>
+<g stroke="#0f172a" stroke-width="2" fill="none"><circle cx="1210" cy="180" r="10" fill="#fde68a"/><line x1="1210" y1="190" x2="1210" y2="218"/><line x1="1192" y1="200" x2="1228" y2="200"/><line x1="1210" y1="218" x2="1195" y2="240"/><line x1="1210" y1="218" x2="1225" y2="240"/></g>
+<text x="1210" y="258" text-anchor="middle" font-size="13" font-weight="700">Administrator</text>
+<text x="1210" y="274" text-anchor="middle" font-size="13" font-weight="700">(TTJ mudiri)</text>
+<g stroke="#0f172a" stroke-width="2" fill="none"><circle cx="1210" cy="530" r="10" fill="#fde68a"/><line x1="1210" y1="540" x2="1210" y2="568"/><line x1="1192" y1="550" x2="1228" y2="550"/><line x1="1210" y1="568" x2="1195" y2="590"/><line x1="1210" y1="568" x2="1225" y2="590"/></g>
+<text x="1210" y="608" text-anchor="middle" font-size="13" font-weight="700">Texnik usta</text>
+<ellipse cx="370.0" cy="121.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="370.0" y="125.5" text-anchor="middle" font-size="13" fill="#1e1b4b">Ro&#x27;yxatdan o&#x27;tish</text>
+<path d="M130,372 L260,121" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="370.0" cy="221.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="370.0" y="225.6" text-anchor="middle" font-size="13" fill="#1e1b4b">Jadvalni ko&#x27;rish</text>
+<path d="M130,372 L260,221" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="370.0" cy="321.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="370.0" y="325.6" text-anchor="middle" font-size="13" fill="#1e1b4b">Navbat olish</text>
+<path d="M130,372 L260,321" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="370.0" cy="421.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="370.0" y="417.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Navbatni bekor</text>
+<text x="370.0" y="434.0" text-anchor="middle" font-size="13" fill="#1e1b4b">qilish</text>
+<path d="M130,372 L260,421" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="370.0" cy="521.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="370.0" y="517.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Navbatlarimni</text>
+<text x="370.0" y="534.0" text-anchor="middle" font-size="13" fill="#1e1b4b">ko&#x27;rish</text>
+<path d="M130,372 L260,521" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="370.0" cy="621.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="370.0" y="625.5" text-anchor="middle" font-size="13" fill="#1e1b4b">Xabarlarni o&#x27;qish</text>
+<path d="M130,372 L260,621" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="655.0" cy="321.0" rx="110.0" ry="31.0" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+<text x="655.0" y="317.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Bo&#x27;sh vaqt va</text>
+<text x="655.0" y="334.0" text-anchor="middle" font-size="13" fill="#1e1b4b">limitni tekshirish</text>
+<path d="M480,321 L545,321" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="512.5" y="314.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">«include»</text>
+<ellipse cx="655.0" cy="501.0" rx="110.0" ry="31.0" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+<text x="655.0" y="497.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Xabarnoma yuborish</text>
+<text x="655.0" y="514.0" text-anchor="middle" font-size="13" fill="#1e1b4b">(Observer)</text>
+<path d="M560,488 L478,436" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="519.0" y="452.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">«extend»</text>
+<ellipse cx="655.0" cy="711.0" rx="110.0" ry="31.0" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="655.0" y="715.5" text-anchor="middle" font-size="13" fill="#1e1b4b">Tizimga kirish</text>
+<path d="M110,440 L110,711 L545,711" fill="none" stroke="#334155" stroke-width="1.6"/>
+<ellipse cx="960.0" cy="131.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="960.0" y="127.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Bugungi navbatlarni</text>
+<text x="960.0" y="144.0" text-anchor="middle" font-size="13" fill="#1e1b4b">ko&#x27;rish</text>
+<ellipse cx="960.0" cy="231.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="960.0" y="227.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Istalgan navbatni</text>
+<text x="960.0" y="244.0" text-anchor="middle" font-size="13" fill="#1e1b4b">bekor qilish</text>
+<ellipse cx="960.0" cy="331.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="960.0" y="327.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Audit jurnalini</text>
+<text x="960.0" y="344.0" text-anchor="middle" font-size="13" fill="#1e1b4b">ko&#x27;rish</text>
+<ellipse cx="960.0" cy="501.0" rx="110.0" ry="31.0" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="960.0" y="497.1" text-anchor="middle" font-size="13" fill="#1e1b4b">Mashina holatini</text>
+<text x="960.0" y="514.0" text-anchor="middle" font-size="13" fill="#1e1b4b">o&#x27;zgartirish</text>
+<path d="M1190,228 L1070,131" fill="none" stroke="#334155" stroke-width="1.6"/>
+<path d="M1190,228 L1070,231" fill="none" stroke="#334155" stroke-width="1.6"/>
+<path d="M1190,228 L1070,331" fill="none" stroke="#334155" stroke-width="1.6"/>
+<path d="M1190,228 L1070,501" fill="none" stroke="#334155" stroke-width="1.6"/>
+<path d="M765,501 L850,501" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="807.5" y="493.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">«extend»</text>
+<path d="M1190,560 L1070,501" fill="none" stroke="#334155" stroke-width="1.6"/>
+<path d="M1210,620 L1210,711 L765,711" fill="none" stroke="#334155" stroke-width="1.6"/>
+<path d="M1235,215 L1270,215 L1270,760 L700,760 L700,742" fill="none" stroke="#334155" stroke-width="1.6"/>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="1120" viewBox="0 0 1550 1120" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1,1 L11,6 L1,11" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker><marker id="fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="context-stroke"/></marker><marker id="tri" viewBox="0 0 16 16" refX="15" refY="8" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M1,1 L15,8 L1,15 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker><marker id="dia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="context-stroke"/></marker><marker id="odia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect width="1550" height="1120" fill="#ffffff"/>
+<g stroke="#0f172a" stroke-width="2" fill="none"><circle cx="110" cy="22" r="10" fill="#fde68a"/><line x1="110" y1="32" x2="110" y2="60"/><line x1="92" y1="42" x2="128" y2="42"/><line x1="110" y1="60" x2="95" y2="82"/><line x1="110" y1="60" x2="125" y2="82"/></g>
+<text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700">Talaba</text>
+<line x1="110" y1="110" x2="110" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="207" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="285.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Brauzer</text>
+<line x1="285" y1="78" x2="285" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="382" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="460.0" y="50.1" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">app.py</text>
+<text x="460.0" y="66.3" text-anchor="middle" font-size="12" font-weight="400" fill="#0f172a">/navbat</text>
+<line x1="460" y1="78" x2="460" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="557" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="635.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">BookingService</text>
+<line x1="635" y1="78" x2="635" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="732" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="810.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">validators</text>
+<line x1="810" y1="78" x2="810" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="907" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="985.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">MachineRepository</text>
+<line x1="985" y1="78" x2="985" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="1082" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="1160.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">BookingRepository</text>
+<line x1="1160" y1="78" x2="1160" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="1257" y="30" width="156" height="48" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="1335.0" y="58.2" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">SQLite</text>
+<line x1="1335" y1="78" x2="1335" y2="1100" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<path d="M110,140 L281,140" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="195.5" y="133.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">1: «Yozilish» tugmasini bosadi</text>
+<path d="M285,184 L456,184" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="370.5" y="177.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">2: POST /navbat (csrf, machine_id, day, hour)</text>
+<path d="M460,228 L510,228 L510,254 L466,254" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="518" y="245.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">3: CSRF va sessiyani tekshirish</text>
+<path d="M460,290 L631,290" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="545.5" y="283.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">4: book(user, machine_id, day, hour, now)</text>
+<path d="M635,334 L806,334" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="720.5" y="327.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">5: is_valid_hour(hour), is_valid_day(day)</text>
+<path d="M810,378 L639,378" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="724.5" y="371.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">True</text>
+<path d="M635,422 L981,422" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="808.0" y="415.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">6: by_id(machine_id)</text>
+<path d="M985,466 L639,466" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="812.0" y="459.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">Machine (ishlaydi)</text>
+<path d="M635,510 L1156,510" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="895.5" y="503.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">7: is_taken(machine_id, start)</text>
+<path d="M1160,554 L1331,554" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="1245.5" y="547.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">SELECT ... WHERE status=&#x27;faol&#x27;</text>
+<path d="M1160,598 L639,598" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="899.5" y="591.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">False (bo&#x27;sh)</text>
+<path d="M635,642 L1156,642" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="895.5" y="635.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">8: count_future_active(user_id, now)</text>
+<path d="M1160,686 L639,686" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="899.5" y="679.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">1  (&lt; 2, ruxsat)</text>
+<path d="M635,730 L1156,730" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="895.5" y="723.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">9: add(user_id, machine_id, start)</text>
+<path d="M1160,774 L1331,774" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#fill)"/>
+<text x="1245.5" y="767.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">INSERT INTO bookings ...</text>
+<path d="M1160,818 L639,818" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="899.5" y="811.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">booking_id</text>
+<path d="M635,862 L464,862" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="549.5" y="855.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">booking_id</text>
+<path d="M460,906 L289,906" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="374.5" y="899.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">10: 302 → /jadval + «Navbat olindi»</text>
+<path d="M285,950 L114,950" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="199.5" y="943.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">11: katak yashil «Sizniki»</text>
+<path d="M635,1030 L464,1030" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="549.5" y="1023.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">ServiceError(«Bu vaqt band.»)</text>
+<path d="M460,1074 L289,1074" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="374.5" y="1067.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">302 → /jadval + qizil xabar</text>
+<rect x="225" y="992" width="470" height="104" rx="0" fill="none" stroke="#9333ea" stroke-width="1.6"/>
+<text x="460.0" y="1048.5" text-anchor="middle" font-size="13" font-weight="400" fill="#0f172a"></text>
+<rect x="225" y="992" width="170" height="22" rx="0" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.6"/>
+<text x="310.0" y="1007.2" text-anchor="middle" font-size="12" font-weight="400" fill="#0f172a">alt [vaqt band / limit]</text>
+</svg>

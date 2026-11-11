@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1530" height="1080" viewBox="0 0 1530 1080" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1,1 L11,6 L1,11" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker><marker id="fill" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="context-stroke"/></marker><marker id="tri" viewBox="0 0 16 16" refX="15" refY="8" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M1,1 L15,8 L1,15 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker><marker id="dia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="context-stroke"/></marker><marker id="odia" viewBox="0 0 20 12" refX="1" refY="6" markerWidth="20" markerHeight="12" orient="auto-start-reverse"><path d="M1,6 L10,1 L19,6 L10,11 z" fill="#fff" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect width="1530" height="1080" fill="#ffffff"/>
+<text x="30" y="26.0" text-anchor="start" font-size="13" font-weight="700" fill="#b45309">Domen sinflari (models.py)</text>
+<rect x="30" y="40" width="340" height="190" fill="#fff" stroke="#b45309" stroke-width="1.6"/>
+<rect x="30" y="40" width="340" height="30" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="200.0" y="60" text-anchor="middle" font-size="14" font-weight="700">User</text>
+<text x="38" y="86" font-size="12" font-family="Consolas, monospace">- id: int</text>
+<text x="38" y="104" font-size="12" font-family="Consolas, monospace">- username: str</text>
+<text x="38" y="122" font-size="12" font-family="Consolas, monospace">- full_name: str</text>
+<text x="38" y="140" font-size="12" font-family="Consolas, monospace">- room: int</text>
+<text x="38" y="158" font-size="12" font-family="Consolas, monospace">- role: str</text>
+<text x="38" y="176" font-size="12" font-family="Consolas, monospace">- password_hash: str</text>
+<line x1="30" y1="184" x2="370" y2="184" stroke="#b45309" stroke-width="1.2"/>
+<text x="38" y="200" font-size="12" font-family="Consolas, monospace">+ is_admin(): bool</text>
+<text x="38" y="218" font-size="12" font-family="Consolas, monospace">+ can_change_machine(): bool</text>
+<rect x="400" y="40" width="340" height="154" fill="#fff" stroke="#b45309" stroke-width="1.6"/>
+<rect x="400" y="40" width="340" height="30" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="570.0" y="60" text-anchor="middle" font-size="14" font-weight="700">Booking</text>
+<text x="408" y="86" font-size="12" font-family="Consolas, monospace">- id: int</text>
+<text x="408" y="104" font-size="12" font-family="Consolas, monospace">- user_id: int</text>
+<text x="408" y="122" font-size="12" font-family="Consolas, monospace">- machine_id: int</text>
+<text x="408" y="140" font-size="12" font-family="Consolas, monospace">- start: datetime</text>
+<text x="408" y="158" font-size="12" font-family="Consolas, monospace">- status: str</text>
+<line x1="400" y1="166" x2="740" y2="166" stroke="#b45309" stroke-width="1.2"/>
+<text x="408" y="182" font-size="12" font-family="Consolas, monospace">+ is_active(): bool</text>
+<rect x="770" y="40" width="340" height="136" fill="#fff" stroke="#b45309" stroke-width="1.6"/>
+<rect x="770" y="40" width="340" height="30" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="940.0" y="60" text-anchor="middle" font-size="14" font-weight="700">Machine</text>
+<text x="778" y="86" font-size="12" font-family="Consolas, monospace">- id: int</text>
+<text x="778" y="104" font-size="12" font-family="Consolas, monospace">- name: str</text>
+<text x="778" y="122" font-size="12" font-family="Consolas, monospace">- floor: int</text>
+<text x="778" y="140" font-size="12" font-family="Consolas, monospace">- status: str</text>
+<line x1="770" y1="148" x2="1110" y2="148" stroke="#b45309" stroke-width="1.2"/>
+<text x="778" y="164" font-size="12" font-family="Consolas, monospace">+ is_available(): bool</text>
+<rect x="1140" y="40" width="340" height="136" fill="#fff" stroke="#b45309" stroke-width="1.6"/>
+<rect x="1140" y="40" width="340" height="30" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="1310.0" y="60" text-anchor="middle" font-size="14" font-weight="700">Notification</text>
+<text x="1148" y="86" font-size="12" font-family="Consolas, monospace">- id: int</text>
+<text x="1148" y="104" font-size="12" font-family="Consolas, monospace">- user_id: int</text>
+<text x="1148" y="122" font-size="12" font-family="Consolas, monospace">- text: str</text>
+<text x="1148" y="140" font-size="12" font-family="Consolas, monospace">- created_at: str</text>
+<text x="1148" y="158" font-size="12" font-family="Consolas, monospace">- is_read: int</text>
+<line x1="1140" y1="166" x2="1480" y2="166" stroke="#b45309" stroke-width="1.2"/>
+<path d="M400,110 L370,110" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<text x="378" y="100.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">1</text>
+<text x="385" y="128.0" text-anchor="start" font-size="13" font-weight="400" fill="#0f172a">*</text>
+<path d="M740,110 L770,110" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<text x="744" y="100.0" text-anchor="start" font-size="13" font-weight="400" fill="#0f172a">*</text>
+<text x="758" y="128.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">1</text>
+<path d="M1310,40 L1310,14 L200,14 L200,40" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<text x="1316" y="34.0" text-anchor="start" font-size="13" font-weight="400" fill="#0f172a">*</text>
+<text x="214" y="34.0" text-anchor="start" font-size="12" font-weight="400" fill="#0f172a">1</text>
+<text x="30" y="296.0" text-anchor="start" font-size="13" font-weight="700" fill="#1d4ed8">Mantiq qatlami (services.py, observer.py)</text>
+<rect x="30" y="310" width="340" height="118" fill="#fff" stroke="#1d4ed8" stroke-width="1.6"/>
+<rect x="30" y="310" width="340" height="30" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="200.0" y="330" text-anchor="middle" font-size="14" font-weight="700">AuthService</text>
+<text x="38" y="356" font-size="12" font-family="Consolas, monospace">- users: UserRepository</text>
+<line x1="30" y1="364" x2="370" y2="364" stroke="#1d4ed8" stroke-width="1.2"/>
+<text x="38" y="380" font-size="12" font-family="Consolas, monospace">+ register(username, full_name,</text>
+<text x="38" y="398" font-size="12" font-family="Consolas, monospace">      room, password): User</text>
+<text x="38" y="416" font-size="12" font-family="Consolas, monospace">+ login(username, password, now): User</text>
+<rect x="400" y="310" width="340" height="172" fill="#fff" stroke="#1d4ed8" stroke-width="1.6"/>
+<rect x="400" y="310" width="340" height="30" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="570.0" y="330" text-anchor="middle" font-size="14" font-weight="700">BookingService</text>
+<text x="408" y="356" font-size="12" font-family="Consolas, monospace">- bookings: BookingRepository</text>
+<text x="408" y="374" font-size="12" font-family="Consolas, monospace">- machines: MachineRepository</text>
+<text x="408" y="392" font-size="12" font-family="Consolas, monospace">- events: EventBus</text>
+<line x1="400" y1="400" x2="740" y2="400" stroke="#1d4ed8" stroke-width="1.2"/>
+<text x="408" y="416" font-size="12" font-family="Consolas, monospace">+ day_grid(day): dict</text>
+<text x="408" y="434" font-size="12" font-family="Consolas, monospace">+ book(user, machine_id, day, hour, now)</text>
+<text x="408" y="452" font-size="12" font-family="Consolas, monospace">+ cancel(user, booking_id, now)</text>
+<text x="408" y="470" font-size="12" font-family="Consolas, monospace">+ set_machine_status(user, id, status, now)</text>
+<rect x="770" y="310" width="340" height="134" fill="#fff" stroke="#15803d" stroke-width="1.6"/>
+<rect x="770" y="310" width="340" height="46" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6"/>
+<text x="940.0" y="326" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">«Subject»</text>
+<text x="940.0" y="346" text-anchor="middle" font-size="14" font-weight="700">EventBus</text>
+<text x="778" y="372" font-size="12" font-family="Consolas, monospace">- _observers: list[Observer]</text>
+<line x1="770" y1="380" x2="1110" y2="380" stroke="#15803d" stroke-width="1.2"/>
+<text x="778" y="396" font-size="12" font-family="Consolas, monospace">+ subscribe(observer)</text>
+<text x="778" y="414" font-size="12" font-family="Consolas, monospace">+ unsubscribe(observer)</text>
+<text x="778" y="432" font-size="12" font-family="Consolas, monospace">+ notify(event, data)</text>
+<rect x="1140" y="310" width="340" height="80" fill="#fff" stroke="#15803d" stroke-width="1.6"/>
+<rect x="1140" y="310" width="340" height="46" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6"/>
+<text x="1310.0" y="326" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">«interface»</text>
+<text x="1310.0" y="346" text-anchor="middle" font-size="14" font-weight="700">Observer</text>
+<line x1="1140" y1="362" x2="1480" y2="362" stroke="#15803d" stroke-width="1.2"/>
+<text x="1148" y="378" font-size="12" font-family="Consolas, monospace">+ update(event, data) {abstract}</text>
+<path d="M740,380 L770,380" fill="none" stroke="#334155" stroke-width="1.6" marker-start="url(#dia)" marker-end="url(#open)"/>
+<path d="M1110,380 L1140,380" fill="none" stroke="#334155" stroke-width="1.6" marker-start="url(#odia)"/>
+<text x="1112" y="400.0" text-anchor="start" font-size="11" font-weight="400" fill="#0f172a">0..*</text>
+<text x="30" y="606.0" text-anchor="start" font-size="13" font-weight="700" fill="#7c3aed">Ma&#x27;lumotlar qatlami (repository.py)</text>
+<rect x="30" y="620" width="340" height="154" fill="#fff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="30" y="620" width="340" height="30" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="200.0" y="640" text-anchor="middle" font-size="14" font-weight="700">UserRepository</text>
+<text x="38" y="666" font-size="12" font-family="Consolas, monospace">- conn: sqlite3.Connection</text>
+<line x1="30" y1="674" x2="370" y2="674" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="38" y="690" font-size="12" font-family="Consolas, monospace">+ add(...): int</text>
+<text x="38" y="708" font-size="12" font-family="Consolas, monospace">+ by_username(username): User</text>
+<text x="38" y="726" font-size="12" font-family="Consolas, monospace">+ by_id(user_id): User</text>
+<text x="38" y="744" font-size="12" font-family="Consolas, monospace">+ lock_info(username)</text>
+<text x="38" y="762" font-size="12" font-family="Consolas, monospace">+ set_lock_info(username, failed, until)</text>
+<rect x="400" y="620" width="340" height="154" fill="#fff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="400" y="620" width="340" height="30" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="570.0" y="640" text-anchor="middle" font-size="14" font-weight="700">BookingRepository</text>
+<text x="408" y="666" font-size="12" font-family="Consolas, monospace">- conn: sqlite3.Connection</text>
+<line x1="400" y1="674" x2="740" y2="674" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="408" y="690" font-size="12" font-family="Consolas, monospace">+ add(user_id, machine_id, start): int</text>
+<text x="408" y="708" font-size="12" font-family="Consolas, monospace">+ is_taken(machine_id, start): bool</text>
+<text x="408" y="726" font-size="12" font-family="Consolas, monospace">+ count_future_active(user_id, now)</text>
+<text x="408" y="744" font-size="12" font-family="Consolas, monospace">+ future_for_machine(machine_id, now)</text>
+<text x="408" y="762" font-size="12" font-family="Consolas, monospace">+ cancel(booking_id)</text>
+<rect x="770" y="620" width="340" height="82" fill="#fff" stroke="#15803d" stroke-width="1.6"/>
+<rect x="770" y="620" width="340" height="30" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6"/>
+<text x="940.0" y="640" text-anchor="middle" font-size="14" font-weight="700">NotificationObserver</text>
+<text x="778" y="666" font-size="12" font-family="Consolas, monospace">- repo: NotificationRepository</text>
+<line x1="770" y1="674" x2="1110" y2="674" stroke="#15803d" stroke-width="1.2"/>
+<text x="778" y="690" font-size="12" font-family="Consolas, monospace">+ update(event, data)</text>
+<rect x="1140" y="620" width="340" height="118" fill="#fff" stroke="#15803d" stroke-width="1.6"/>
+<rect x="1140" y="620" width="340" height="30" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6"/>
+<text x="1310.0" y="640" text-anchor="middle" font-size="14" font-weight="700">AuditLogObserver</text>
+<text x="1148" y="666" font-size="12" font-family="Consolas, monospace">- path: str</text>
+<text x="1148" y="684" font-size="12" font-family="Consolas, monospace">- records: list[str]</text>
+<line x1="1140" y1="692" x2="1480" y2="692" stroke="#15803d" stroke-width="1.2"/>
+<text x="1148" y="708" font-size="12" font-family="Consolas, monospace">+ update(event, data)</text>
+<text x="1148" y="726" font-size="12" font-family="Consolas, monospace">+ last(n): list[str]</text>
+<rect x="30" y="880" width="340" height="118" fill="#fff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="30" y="880" width="340" height="30" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="200.0" y="900" text-anchor="middle" font-size="14" font-weight="700">MachineRepository</text>
+<text x="38" y="926" font-size="12" font-family="Consolas, monospace">- conn: sqlite3.Connection</text>
+<line x1="30" y1="934" x2="370" y2="934" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="38" y="950" font-size="12" font-family="Consolas, monospace">+ all(): list[Machine]</text>
+<text x="38" y="968" font-size="12" font-family="Consolas, monospace">+ by_id(machine_id): Machine</text>
+<text x="38" y="986" font-size="12" font-family="Consolas, monospace">+ set_status(machine_id, status)</text>
+<rect x="770" y="880" width="340" height="118" fill="#fff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="770" y="880" width="340" height="30" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="940.0" y="900" text-anchor="middle" font-size="14" font-weight="700">NotificationRepository</text>
+<text x="778" y="926" font-size="12" font-family="Consolas, monospace">- conn: sqlite3.Connection</text>
+<line x1="770" y1="934" x2="1110" y2="934" stroke="#7c3aed" stroke-width="1.2"/>
+<text x="778" y="950" font-size="12" font-family="Consolas, monospace">+ add(user_id, text, created_at)</text>
+<text x="778" y="968" font-size="12" font-family="Consolas, monospace">+ for_user(user_id): list</text>
+<text x="778" y="986" font-size="12" font-family="Consolas, monospace">+ unread_count(user_id): int</text>
+<path d="M200,428 L200,620" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<path d="M570,482 L570,620" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<path d="M400,460 L385,460 L385,930 L370,930" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<path d="M940,702 L940,880" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#open)"/>
+<path d="M940,620 L940,560 L1240,560 L1240,400" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#tri)"/>
+<path d="M1310,620 L1310,400" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#tri)"/>
+<path d="M570,310 L570,194" fill="none" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="570.0" y="256.0" text-anchor="middle" font-size="12" fill="#0f172a" paint-order="stroke" stroke="#fff" stroke-width="4">yaratadi / o&#x27;qiydi</text>
+</svg>
