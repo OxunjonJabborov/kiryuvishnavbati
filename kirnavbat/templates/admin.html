@@ -6,7 +6,7 @@
 {% for m in machines %}
   <div class="card mcard {{ 'bad' if not m.is_available() }}">
     <b>{{ m.name }}</b><span class="tag {{ 'red' if not m.is_available() else 'green' }}">{{ m.status }}</span>
-    <form method="post" action="{{ url_for('machine_status', machine_id=m.id) }}">
+    <form method="post" action="{{ url_for('machine_status', machine_id=m.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}">
       {% if m.is_available() %}<input type="hidden" name="status" value="buzilgan"><button class="danger">Buzilgan deb belgilash</button>
       {% else %}<input type="hidden" name="status" value="ishlaydi"><button>Tuzatildi</button>{% endif %}
     </form>
@@ -18,7 +18,7 @@
 {% for key, b in grid|dictsort %}
 <tr><td>{{ b.start.strftime('%H:%M') }}</td><td>{{ machines|selectattr('id','equalto',b.machine_id)|map(attribute='name')|first }}</td>
 <td>{{ users[b.user_id].full_name }} ({{ users[b.user_id].room }})</td>
-<td>{% if user.is_admin() %}<form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><button class="ghost">Bekor</button></form>{% endif %}</td></tr>
+<td>{% if user.is_admin() %}<form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="ghost">Bekor</button></form>{% endif %}</td></tr>
 {% else %}<tr><td colspan="4" class="muted">Bugun navbat yo'q</td></tr>{% endfor %}
 </table>
 <h2>Audit jurnali</h2>

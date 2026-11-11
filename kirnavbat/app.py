@@ -1,5 +1,6 @@
 """Ekran qatlami: Flask marshrutlari. SQL yo'q, faqat servislarni chaqiradi."""
 import os
+import secrets
 from datetime import date, datetime, timedelta
 from functools import wraps
 
@@ -24,6 +25,9 @@ def create_app(test_config: dict | None = None) -> Flask:
         SECRET_KEY=os.environ.get("KIRNAVBAT_SECRET", "dev-faqat-lokal-uchun"),
         DATABASE=os.path.join(app.instance_path, "kirnavbat.db"),
         NOW=datetime.now,            # testlarda vaqtni almashtirish uchun
+        SESSION_COOKIE_HTTPONLY=True,   # JavaScript cookie ni o'qiy olmaydi
+        SESSION_COOKIE_SAMESITE="Lax",  # boshqa saytdan so'rov yuborishni qiyinlashtiradi
+        PERMANENT_SESSION_LIFETIME=timedelta(hours=8),
     )
     if test_config:
         app.config.update(test_config)
@@ -71,10 +75,29 @@ def _register_routes(app: Flask) -> None:
         uid = session.get("user_id")
         g.user = ctx()["users"].by_id(uid) if uid else None
 
+    # Himoya №4: CSRF — har bir POST formada sessiyaga bog'langan maxfiy token
+    def csrf_token() -> str:
+        if "csrf" not in session:
+            session["csrf"] = secrets.token_hex(16)
+        return session["csrf"]
+
+    @app.before_request
+    def check_csrf():
+        if request.method == "POST" and not app.config.get("CSRF_DISABLED"):
+            sent = request.form.get("csrf", "")
+            if not sent or not secrets.compare_digest(sent, session.get("csrf", "")):
+                abort(400, "CSRF token noto'g'ri")
+
+    @app.after_request
+    def security_headers(resp):
+        resp.headers["X-Content-Type-Options"] = "nosniff"
+        resp.headers["X-Frame-Options"] = "DENY"
+        return resp
+
     @app.context_processor
     def inject():
         unread = ctx()["notes"].unread_count(g.user.id) if g.get("user") else 0
-        return {"user": g.get("user"), "unread": unread}
+        return {"user": g.get("user"), "unread": unread, "csrf_token": csrf_token}
 
     def login_required(view):
         @wraps(view)

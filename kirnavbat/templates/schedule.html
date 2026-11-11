@@ -18,12 +18,12 @@
     {% set past = day == now.date() and h <= now.hour %}
     <td>
       {% if b and b.user_id == user.id %}
-        <form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><button class="slot mine" title="Bekor qilish">Sizniki ✕</button></form>
+        <form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="slot mine" title="Bekor qilish">Sizniki ✕</button></form>
       {% elif b %}<span class="slot taken">Band · {{ rooms[b.user_id] }}-xona</span>
       {% elif not m.is_available() %}<span class="slot broken">—</span>
       {% elif past %}<span class="slot past">o'tdi</span>
       {% else %}
-        <form method="post" action="{{ url_for('book') }}">
+        <form method="post" action="{{ url_for('book') }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}">
           <input type="hidden" name="machine_id" value="{{ m.id }}"><input type="hidden" name="day" value="{{ day.isoformat() }}"><input type="hidden" name="hour" value="{{ h }}">
           <button class="slot free">Yozilish</button></form>
       {% endif %}
