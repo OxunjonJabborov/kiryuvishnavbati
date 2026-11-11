@@ -8,6 +8,7 @@
   {% endfor %}
 </div>
 <div class="legend"><span class="c free"></span> Bo'sh <span class="c mine"></span> Sizniki <span class="c taken"></span> Band <span class="c broken"></span> Buzilgan</div>
+<p class="muted small mobile-hint">← Boshqa mashinalarni ko'rish uchun jadvalni suring →</p>
 <div class="gridwrap">
 <table class="grid">
   <thead><tr><th>Soat</th>{% for m in machines %}<th>{{ m.name }}{% if not m.is_available() %}<br><span class="tag red">buzilgan</span>{% endif %}</th>{% endfor %}</tr></thead>
@@ -18,7 +19,7 @@
     {% set past = day == now.date() and h <= now.hour %}
     <td>
       {% if b and b.user_id == user.id %}
-        <form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="slot mine" title="Bekor qilish">Sizniki ✕</button></form>
+        <form method="post" action="{{ url_for('cancel', booking_id=b.id) }}" onsubmit="return confirm('Navbatni bekor qilasizmi?')"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="slot mine" title="Bekor qilish">Sizniki ✕</button></form>
       {% elif b %}<span class="slot taken">Band · {{ rooms[b.user_id] }}-xona</span>
       {% elif not m.is_available() %}<span class="slot broken">—</span>
       {% elif past %}<span class="slot past">o'tdi</span>

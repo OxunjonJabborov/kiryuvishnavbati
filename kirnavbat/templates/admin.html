@@ -15,10 +15,10 @@
 </div>
 <h2>Bugungi navbatlar ({{ today.strftime('%d.%m') }})</h2>
 <table class="tbl"><tr><th>Vaqt</th><th>Mashina</th><th>Talaba</th><th></th></tr>
-{% for key, b in grid|dictsort %}
+{% for b in rows %}
 <tr><td>{{ b.start.strftime('%H:%M') }}</td><td>{{ machines|selectattr('id','equalto',b.machine_id)|map(attribute='name')|first }}</td>
 <td>{{ users[b.user_id].full_name }} ({{ users[b.user_id].room }})</td>
-<td>{% if user.is_admin() %}<form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="ghost">Bekor</button></form>{% endif %}</td></tr>
+<td>{% if user.is_admin() %}<form method="post" action="{{ url_for('cancel', booking_id=b.id) }}" onsubmit="return confirm('Navbatni bekor qilasizmi?')"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="ghost">Bekor</button></form>{% endif %}</td></tr>
 {% else %}<tr><td colspan="4" class="muted">Bugun navbat yo'q</td></tr>{% endfor %}
 </table>
 <h2>Audit jurnali</h2>
