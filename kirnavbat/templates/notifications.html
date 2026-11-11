@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}Xabarlar{% endblock %}
+{% block body %}
+<h1>Xabarlar</h1>
+{% if not items %}<p class="muted">Yangi xabar yo'q.</p>{% endif %}
+<ul class="list">
+{% for n in items %}<li class="card note {{ 'new' if not n.is_read }}"><span class="muted small">{{ n.created_at }}</span><br>{{ n.text }}</li>{% endfor %}
+</ul>
+{% endblock %}

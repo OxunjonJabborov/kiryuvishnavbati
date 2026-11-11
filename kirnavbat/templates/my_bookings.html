@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block title %}Navbatlarim{% endblock %}
+{% block body %}
+<h1>Mening navbatlarim</h1>
+{% if not items %}<p class="muted">Hali navbat olmagansiz. <a href="{{ url_for('schedule') }}">Jadvalga o'ting</a>.</p>{% endif %}
+<ul class="list">
+{% for b in items %}
+  <li class="card row {{ 'dim' if not b.is_active() or b.start <= now }}">
+    <div><b>{{ b.start.strftime('%d.%m.%Y') }}, {{ b.start.strftime('%H:%M') }}–{{ '%02d' % (b.start.hour + 1) }}:00</b><br><span class="muted">{{ names[b.machine_id] }}</span></div>
+    {% if b.is_active() and b.start > now %}
+      <form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><button class="ghost">Bekor qilish</button></form>
+    {% else %}<span class="tag">{{ 'bekor qilingan' if not b.is_active() else "o'tgan" }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}

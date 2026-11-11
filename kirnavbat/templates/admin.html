@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% block title %}Boshqaruv{% endblock %}
+{% block body %}
+<h1>Boshqaruv paneli</h1>
+<h2>Mashinalar holati</h2>
+<div class="machines">
+{% for m in machines %}
+  <div class="card mcard {{ 'bad' if not m.is_available() }}">
+    <b>{{ m.name }}</b><span class="tag {{ 'red' if not m.is_available() else 'green' }}">{{ m.status }}</span>
+    <form method="post" action="{{ url_for('machine_status', machine_id=m.id) }}">
+      {% if m.is_available() %}<input type="hidden" name="status" value="buzilgan"><button class="danger">Buzilgan deb belgilash</button>
+      {% else %}<input type="hidden" name="status" value="ishlaydi"><button>Tuzatildi</button>{% endif %}
+    </form>
+  </div>
+{% endfor %}
+</div>
+<h2>Bugungi navbatlar ({{ today.strftime('%d.%m') }})</h2>
+<table class="tbl"><tr><th>Vaqt</th><th>Mashina</th><th>Talaba</th><th></th></tr>
+{% for key, b in grid|dictsort %}
+<tr><td>{{ b.start.strftime('%H:%M') }}</td><td>{{ machines|selectattr('id','equalto',b.machine_id)|map(attribute='name')|first }}</td>
+<td>{{ users[b.user_id].full_name }} ({{ users[b.user_id].room }})</td>
+<td>{% if user.is_admin() %}<form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><button class="ghost">Bekor</button></form>{% endif %}</td></tr>
+{% else %}<tr><td colspan="4" class="muted">Bugun navbat yo'q</td></tr>{% endfor %}
+</table>
+<h2>Audit jurnali</h2>
+<pre class="log">{% for r in log %}{{ r }}
+{% else %}Hali hodisa yo'q{% endfor %}</pre>
+{% endblock %}

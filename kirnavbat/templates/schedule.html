@@ -1,0 +1,36 @@
+{% extends "base.html" %}{% block title %}Jadval{% endblock %}
+{% block body %}
+<h1>Mashinalar jadvali</h1>
+<div class="days">
+  {% for d in days %}
+  <a href="{{ url_for('schedule', kun=d.isoformat()) }}" class="day {{ 'on' if d == day }}">
+    <small>{{ weekdays[d.weekday()] }}</small><b>{{ d.strftime('%d.%m') }}</b></a>
+  {% endfor %}
+</div>
+<div class="legend"><span class="c free"></span> Bo'sh <span class="c mine"></span> Sizniki <span class="c taken"></span> Band <span class="c broken"></span> Buzilgan</div>
+<div class="gridwrap">
+<table class="grid">
+  <thead><tr><th>Soat</th>{% for m in machines %}<th>{{ m.name }}{% if not m.is_available() %}<br><span class="tag red">buzilgan</span>{% endif %}</th>{% endfor %}</tr></thead>
+  <tbody>
+  {% for h in hours %}
+  <tr><th>{{ '%02d' % h }}:00</th>
+    {% for m in machines %}{% set b = grid.get((m.id, h)) %}
+    {% set past = day == now.date() and h <= now.hour %}
+    <td>
+      {% if b and b.user_id == user.id %}
+        <form method="post" action="{{ url_for('cancel', booking_id=b.id) }}"><button class="slot mine" title="Bekor qilish">Sizniki ✕</button></form>
+      {% elif b %}<span class="slot taken">Band · {{ rooms[b.user_id] }}-xona</span>
+      {% elif not m.is_available() %}<span class="slot broken">—</span>
+      {% elif past %}<span class="slot past">o'tdi</span>
+      {% else %}
+        <form method="post" action="{{ url_for('book') }}">
+          <input type="hidden" name="machine_id" value="{{ m.id }}"><input type="hidden" name="day" value="{{ day.isoformat() }}"><input type="hidden" name="hour" value="{{ h }}">
+          <button class="slot free">Yozilish</button></form>
+      {% endif %}
+    </td>{% endfor %}
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
